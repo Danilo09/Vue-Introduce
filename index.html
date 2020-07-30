@@ -1,0 +1,26 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+    <div id="app">
+
+        <div class="cart">
+            <p>Cart({{ cart.length }})</p>
+        </div>
+        
+        <product :premium="premium" @add-to-cart="updateCart" @remove-from-cart="removeItem"></product>
+        
+        
+    </div>
+
+
+
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+    </body>
+</html>

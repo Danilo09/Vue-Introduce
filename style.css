@@ -1,0 +1,37 @@
+.product-image {
+    width: 30%;
+    display: inline-block;
+}
+.product {
+    display: inline-block;
+    width: 69%;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    background-color: #444444;
+    color: white;
+}
+.color-box {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+.cart {
+    position: absolute;
+    top: 0;
+    right: 30%;
+    border: 1px solid #ccc;
+    width: 80px;
+    text-align: center;
+    color: #444444;
+}
+.disabledButton {
+    background-color: #d8d8d8;
+    border: 1px solid #d8d8d8;
+    cursor: not-allowed;
+}
+.out-of-stock {
+    text-decoration: line-through;
+}
