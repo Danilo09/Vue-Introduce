@@ -169,3 +169,34 @@ var app = new Vue({
     },
 
 })
+
+
+
+
+var origamid = new Vue({
+    el: '#origamid',
+    data: {
+        nome: 'Danilo',
+    }
+})
+
+var app1 = new Vue({
+    el: '#app1',
+    data: {
+        ferramenta: 'Martelo',
+    }
+})
+
+var app2 = new Vue({
+    el: '#app2',
+    data: {
+        instrumento: 'Violão',
+    }
+})
+
+var quadrado = new Vue({
+    el: '#quadrado',
+    data: {
+        lado: 20
+    }
+})
