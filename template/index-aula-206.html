@@ -1,0 +1,41 @@
+
+<html>
+        <head>
+            <link rel="stylesheet" href="../front-dev/assets/css/style.css">
+        </head>
+        <body>
+        <style>
+            .verde {
+                color: green;
+            }
+            .vermelho {
+                color: red;
+            }
+            .none {
+                display: none;
+            }
+        </style>
+    
+    
+        <div id="app">
+
+            <div>
+                <span>{{ cart }}</span>
+            </div>
+            <template v-if="cart == estoque">
+               <p> Produto sem estoque </p>
+            </template>
+            <template v-else="cart == estoque">
+                <button @click="addtoCart" >Add to Cart</button>
+            </template>
+
+        </div>
+    
+    
+    
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="../front-dev/assets/js/main.js"></script>
+        </body>
+    </html>
+    

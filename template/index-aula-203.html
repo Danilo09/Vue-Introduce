@@ -1,0 +1,51 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../front-dev/assets/css/style.css">
+    </head>
+    <body>
+    <style>
+        .verde {
+            color: green;
+        }
+        .vermelho {
+            color: red;
+        }
+    </style>
+
+
+    <div id="app4">
+
+        <div>
+            <p>Google:</p>
+            <p>{{ google.companyName }}</p>
+            <p :class="google.marketCap < apple.marketCap ? 'vermelho' : 'verde' ">{{ google.marketCap }}</p>
+        </div>
+        <hr>
+        <div>
+            <p>Apple:</p>
+            <p>{{ apple.companyName }}</p>
+            <p :class="apple.marketCap < google.marketCap ? 'vermelho' : 'verde' ">{{ apple.marketCap }}</p>
+        </div>
+       
+      
+        
+        <button @click="puxarDados"></button>
+    </div>
+
+
+    <!-- <div id="app3">        
+        {{ nome }}        
+        <p>latestPrice: {{ acoes.latestPrice }}</p>
+        <p>latestTime: {{ acoes.latestTime }}</p>
+        <p>companyName: {{ acoes.companyName }}</p>
+        <p>iexCloseTime: {{ acoes.iexCloseTime }}</p>
+
+        <button @click="puxarAcoes">Puxar JSON</button>
+    </div> -->
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../front-dev/assets/js/main.js"></script>
+    </body>
+</html>
