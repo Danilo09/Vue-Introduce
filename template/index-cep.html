@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="../front-dev/assets/css/style.css">
+    </head>
+    <body>
+    
+    <div id="app">
+
+        <button @click="fetchCep">Puxar CEP</button>
+        <p>CEP: {{ dadosCep.cep }}</p>
+        <p>Logradouro: {{ dadosCep.logradouro }}</p>
+        <p>Complemento: {{ dadosCep.complemento }}</p>
+        <p>Bairro: {{ dadosCep.bairro }}</p>
+        <p>Localidade: {{ dadosCep.localidade }}</p>
+        <p>UF: {{ dadosCep.uf }}</p>
+        
+        <ul>
+            <li v-for="locais, key in dadosCep">
+                {{ key }}: {{ locais }}
+            </li>
+        </ul>
+    </div>
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="../front-dev/assets/js/main.js"></script>
+    </body>
+</html>

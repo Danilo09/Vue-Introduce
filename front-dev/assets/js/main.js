@@ -1,3 +1,29 @@
+const ap = new Vue({
+    el: '#app',
+    data: {
+        paisSelecionado: "",
+        capital: "",
+        paises: {},
+    },
+    methods: {
+        puxarPaises(){
+            fetch("https://restcountries.eu/rest/v2/all")
+            .then(response => response.json())
+            .then(json => {
+                this.paises = json;
+            })
+        }
+    },
+    watch: {
+        paisSelecionado(valor) {
+            this.capital = this.paises.find((pais) => pais.name === valor)
+        }
+    }
+})
+
+
+
+
 // Vue.component('product',{
 //     props: {
 //         premium: {
@@ -247,15 +273,16 @@
 // })
 
 
-const app = new Vue({
-    el: "#app",
-    data: {
-        cart: 0,
-        estoque: 7,
-    },
-    methods: {
-        addtoCart(){
-            this.cart++
-        }
-    }
-})
+// const app = new Vue({
+//     el: "#app",
+//     data: {
+//         cart: 0,
+//         estoque: 7,
+//     },
+//     methods: {
+//         addtoCart(){
+//             this.cart++
+//         }
+//     }
+// })
+
